@@ -1,0 +1,126 @@
+/* Основные стили */
+body {
+  background-image: url("./artart.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер */
+.container {
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  min-height: 100vh;
+  border-radius: 30px;
+}
+
+/* Основные отступы */
+main {
+  padding: 20px;
+}
+
+/* Секции */
+section {
+  background-color: white;
+  border: 2px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовки */
+h1, h2 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+/* Выравнивание текста */
+.center-text {
+  text-align: center;
+}
+
+/* Списки */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+#contacts .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px; /* Оставляем минимальный отступ */
+}
+
+#contacts .img-container img {
+  max-width: 100%; /* Оставляем оригинальный размер */
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+#contacts .img-container img:hover {
+  transform: scale(1.02); /* Еле заметное увеличение при наведении */
+}
+
+@media (max-width: 768px) {
+  .img-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .img-container img {
+      width: 140px;
+      height: 140px;
+  }
+
+  #contacts .img-container img {
+      max-width: 220px; /* Уменьшаем контакты на мобильных */
+  }
+  #about .img-container {
+    flex-direction: row; /* Остаются в ряд, но уменьшаются */
+    justify-content: center;
+}
+
+#about .img-container img {
+    width: 140px; /* Чуть меньше на мобильных */
+    height: 140px;
+}
+}
+/* Контейнер для фото профиля */
+#about .img-container {
+  display: flex;
+  justify-content: center; /* Выравнивание по центру */
+  align-items: center;
+  gap: 15px; /* Отступ между фото */
+  flex-wrap: wrap; /* Позволяет переносить на новую строку, если экран узкий */
+}
+
+/* Размер и стиль фото профиля */
+#about .img-container img {
+  width: 180px; /* Фиксированный размер */
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+#about .img-container img:hover {
+  transform: scale(1.05); /* Эффект при наведении */
+}
